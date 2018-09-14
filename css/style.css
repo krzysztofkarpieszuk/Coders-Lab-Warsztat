@@ -275,22 +275,19 @@ body {
 .pricing {
     background-color: #f1f1f1;
     width: 100%;
+    padding-bottom: 50px;
 }
 
-.pricing__flex {
+.row {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
 }
 
-.pricing__card {
-    flex-basis: 32%;
-}
 
 .pricing__title {
     font-weight: 700;
     font-size: 20px;
-    margin-top: 50px;
+    padding-top: 30px;
     text-transform: uppercase;
     color: #575757;
 }
@@ -298,29 +295,33 @@ body {
 .pricing__title::after {
     content: "";
     height: 10px;
-    width: 100%;
+    width: 32%;
     margin-top: 5px;
     background-color: #1bba93;
     display: block;
 }
 
+
 .pricing__plan {
+    flex-basis: 32%;
     background-color: #f9f9f9;
+    border: 2px solid #d9d9d9;
     margin-top: 75px;
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-around;
     height: 500px;
 }
+
 
 .pricing__plan::before {
     content: "";
     height: 50px;
     width: 50px;
     border: 2px solid #d4d4d4;
-    background-image: radial-gradient(#c2c2c2 30%, #fff 30%);
+    background-image: radial-gradient(#c2c2c2 35%, #fff 35%);
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -331,10 +332,57 @@ body {
     left: calc(50% - 25px);
 }
 
+/* AKCJA PO NAJECHANIU KURSOREM NA KARTĘ Z OFERTĄ */
+
+.pricing__plan:hover {
+    background-color: #1bba93;
+    border: none;
+}
+
+.pricing__plan:hover.pricing__plan::before {
+    content: "";
+    height: 50px;
+    width: 50px;
+    border: none;
+    background-image: radial-gradient(#fff 35%, #1bba93 35%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    left: calc(50% - 25px);
+}
+
+.pricing__plan:hover .plan__name {
+    color: #fff;
+}
+
+.pricing__plan:hover .circle__cost,
+.pricing__plan:hover .plan__circle > .text--uppercase  {
+    color: #1bba93;
+}
+
+.pricing__plan:hover .plan__cta {
+    background-color: #fff;
+    color: #1bba93;
+}
+
+.pricing__plan:hover .plan__feature:nth-of-type(2n+1) {
+        background: #fff;
+}
+
+.pricing__plan:hover .plan__feature:nth-of-type(2n) {
+    background: #f1f1f1;
+}
+
+
+/* STYLE DLA ZAWARTOŚCI BOXÓW Z OFERTĄ */
+
 .plan__name {
     color: #1bba93;
-    padding-top: 30px;
-
+    padding-top: 40px;
 }
 
 .plan__circle {
@@ -371,7 +419,8 @@ body {
 .plan__features {
     list-style-type: none;
     margin: 20px auto 0;
-    
+    width: 100%;
+    text-align: center;
 }
 
 .plan__feature {
@@ -390,6 +439,7 @@ body {
 }
 
 .plan__cta {
+    padding: 10px 25px ;
     background-color:#1bba93;
     color: #fff;
     margin: auto 0 10px 0;
