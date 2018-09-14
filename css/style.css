@@ -1,0 +1,367 @@
+/* RESET CSS */
+
+/* GENERAL RULES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', Arial, Tahoma, sans-serif;
+}
+
+
+/* KLASY POMOCNICZE */
+/* KONTENER 1060px SZEROKOŚCI */
+.container {
+    max-width: 1060px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* SPAN Z KOLOROM CYAN */
+.text--cyan {
+    color: #1bba93;
+}
+
+.text--uppercase {
+    text-transform: uppercase;
+}
+
+
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* NAGŁÓWEK */
+.page-header {
+    background: #000;
+    width: 100%;
+}
+
+/* GŁÓWNA NAWIGACJA */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+/* LOGO */
+.nav__logo {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    font-size: 15px;
+}
+
+/* GŁÓWNE MENU */
+.main-nav__list {
+    display: flex;
+}
+
+/* ELEMENTY GŁÓWNEGO MENU */
+.main-nav__item {
+    margin-left: 50px;
+    position: relative;
+    font-size: 15px;
+    list-style-type: none;
+}
+
+.main-nav__item:hover .about-dropdown {
+    display: block;
+}
+
+.main-nav__link {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.main-nav__link:link {
+    text-decoration: none;
+    color: white;
+}
+
+
+.main-nav__link:hover {
+    color: #1bba93;
+}
+
+
+
+
+/* O FIRMIE - MENU DROPDOWN */
+.about-dropdown {
+    display: none;
+    list-style-type: none;
+    background: #000;
+    position: absolute;
+    top: 42px;
+    right: -30px;
+}
+
+.about-dropdown::before {
+    content: "";
+    height: 0;
+    padding: 0;
+    border: 10px solid transparent;
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -20px;
+    left: calc(50% - 12.5px);
+}
+
+
+/* O FIRMIE - ELEMENTY MENU DROPDOWN */
+.about-dropdown__item {
+    margin: 10px 25px 10px 10px;
+    padding-right: 10px;
+}
+
+.about-dropdown__link {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* SEKCJA INTRO */
+.intro {
+    width: 100%;
+    background: linear-gradient(to bottom, #fafafa, #cecdd2);
+}
+
+
+/* DIV Z ZAWARTOŚCIĄ SEKCJI INTRO */
+.intro__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 0 30px;
+    align-content: center;
+}
+
+/* ARTYKUŁ W SEKCJI INTRO */
+.intro__info {
+    margin-right: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.intro__title {
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+.intro__para {
+    text-align: center;
+    padding: 10px;
+    line-height: 1.5em;
+}
+
+
+.intro__cta {
+    background-color:#1bba93;
+    color: #fff;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+
+/* KONTROLERY SLIDERA */
+.arrows {
+    background: transparent;
+    border: none;
+    font-weight: 400;
+    font-size: 60px;
+    color: #1bba93;
+}
+
+
+/* SEKCJA PORTFOLIO */
+.portfolio {
+    width: 100%;
+}
+
+.portfolio__flex {
+    display: flex;
+    padding-bottom: 50px;
+    justify-content: space-between;
+}
+
+.portfolio__card {
+    flex-basis: 32%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #d3ccc6;
+}
+
+.portfolio__image {
+    height: 230px;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.portfolio__image--first {
+    background-image: url(../images/box1_img.jpg);
+}
+
+.portfolio__image--second {
+    background-image: url(../images/box2_img.jpg);
+}
+
+.portfolio__title {
+    padding: 15px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.portfolio__title::after {
+    content: "";
+    height: 10px;
+    width: 50%;
+    margin-top: 5px;
+    background-color: #1bba93;
+    display: block;
+}
+
+.portfolio__card--third {
+    padding: 15px;
+    
+}
+
+.portfolio__card--third .portfolio__title {
+    padding: 0;
+    margin-top: 20px;
+}
+
+.portfolio__para {
+    color: #848484;
+    font-size: 14px;
+    line-height: 1.4em;
+    /* margin-bottom: 1px; */ 
+}
+
+.portfolio__para:first-of-type {
+    padding-bottom: 15px;
+}
+
+
+/* SEKCJA PRICING */
+.pricing {
+    background-color: #f1f1f1;
+    width: 100%;
+}
+
+.pricing__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+}
+
+.pricing__card {
+    flex-basis: 32%;
+}
+
+.pricing__title {
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 50px;
+    text-transform: uppercase;
+    color: #575757;
+}
+
+.pricing__title::after {
+    content: "";
+    height: 10px;
+    width: 100%;
+    margin-top: 5px;
+    background-color: #1bba93;
+    display: block;
+}
+
+.pricing__plan {
+    background-color: #f9f9f9;
+    margin-top: 75px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing__plan::before {
+    content: "";
+    height: 50px;
+    width: 50px;
+    border: 2px solid #d4d4d4;
+    background-image: radial-gradient(#c2c2c2 30%, #fff 30%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    left: calc(50% - 25px);
+}
+
+.plan__name {
+
+}
+
+.plan__circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height: 130px;
+    width: 130px;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.circle__cost {
+    font-size: 30px;
+    font-weight: 700;
+    color: #c1c1c1;
+}
+
+
+
+
+
+
+
+
+
+
