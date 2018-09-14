@@ -281,7 +281,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-
 }
 
 .pricing__card {
@@ -311,6 +310,9 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 500px;
 }
 
 .pricing__plan::before {
@@ -330,6 +332,8 @@ body {
 }
 
 .plan__name {
+    color: #1bba93;
+    padding-top: 30px;
 
 }
 
@@ -339,6 +343,7 @@ body {
     justify-content: center;
     align-content: center;
     text-align: center;
+    margin-top: 20px;
     height: 130px;
     width: 130px;
     background-color: #fff;
@@ -354,9 +359,43 @@ body {
     font-size: 30px;
     font-weight: 700;
     color: #c1c1c1;
+    
 }
 
+.plan__circle .text--uppercase {
+    color: #c1c1c1;
+    padding-top: 5px;
+    font-weight: 700;
+}
 
+.plan__features {
+    list-style-type: none;
+    margin: 20px auto 0;
+    
+}
+
+.plan__feature {
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.plan__feature:nth-of-type(2n+1) {
+    background-color: #e4e4e4;
+}
+
+.plan__feature:nth-of-type(2n) {
+    background-color: #f1f1f1;
+}
+
+.plan__cta {
+    background-color:#1bba93;
+    color: #fff;
+    margin: auto 0 10px 0;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
 
 
 
