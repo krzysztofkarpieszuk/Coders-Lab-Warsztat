@@ -52,11 +52,11 @@
     <!-- Sekcja Intro ze Sliderem -->
     <section class="intro">
 
-        <div class="intro__flex container">
+        <div class="row container">
             <button class="arrows arrow--prev">&lt;</button>
             <img src="images/black_chair.png" alt="Black Chair" class="intro__image">
 
-            <article class="intro__info">
+            <article class="intro__info column">
 
                 <h1 class="intro__title">Sit <span class="text--cyan">on</span> our <span class="text--cyan">chair</span></h1>
                 <p class="intro__para">
@@ -96,7 +96,7 @@
         <div class="container">
             <h3 class="pricing__title">Cennik</h3>
             <div class="row">
-                <div class="pricing__plan">
+                <div class="pricing__plan column">
                     <h2 class="plan__name">Basic Plan</h2>
                     <div class="plan__circle">
                         <p class="circle__cost">85<sup>99</sup></p>
@@ -110,7 +110,7 @@
                 </div>
 
 
-                <div class="pricing__plan">
+                <div class="pricing__plan column">
                     <h2 class="plan__name">Standard Plan</h2>
                     <div class="plan__circle">
                         <p class="circle__cost">95<sup>99</sup></p>
@@ -125,7 +125,7 @@
                 </div>
 
 
-                <div class="pricing__plan">
+                <div class="pricing__plan column">
                     <h2 class="plan__name">Advance Plan</h2>
                     <div class="plan__circle">
                         <p class="circle__cost">211<sup>00</sup></p>
@@ -149,13 +149,13 @@
         <div class="container">
             <h3 class="contact__title">Kontakt</h3>
             <div class="row">
-                <div class="contact__form">
+                <div class="contact__form column">
                     <input type="text" id="firstName" name="firstName" placeholder="Imię">
                     <input type="email" name="email" id="email" placeholder="E-mail">
                     <textarea name="message" id="message" placeholder="Wiadomość"></textarea>
                 </div>
 
-                <div class="contact__chair">
+                <div class="contact__send column">
                     <img src="images/red_chair.png" alt="Czerwone Krzesło">
                     <form action="#" class="checkbox__row">
                         <input type="checkbox" name="agree" class="checkbox">
@@ -166,6 +166,27 @@
             </div>
         </div>
     </section>
+
+    <footer class="page-footer">
+        <div class="container row">
+            <p class="footer__text">Copyright 2018 | All Rights Reserved - Sit on chair </p>
+            <div class="social__icons row">
+                <a href="#" class="social__link">
+                    <img src="images/flickr.png" alt="Flickr" class="social__image">
+                </a>
+                <a href="#" class="social__link">
+                    <img src="images/vimeo.png" alt="Vimeo" class="social__image">
+                </a>
+                <a href="#" class="social__link">
+                    <img src="images/pinterest.png" alt="Pinterest" class="social__image">
+                </a>
+                <a href="#" class="social__link">
+                    <img src="images/twitter.png" alt="twitter" class="social__image">
+                </a>
+            </div>
+            <a href="#" class="footer__logo">Sit on Chair</a>
+        </div>
+    </footer>
 </body>
 
 </html>

@@ -34,12 +34,21 @@ body {
   justify-content: space-between;
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /* PRZYCISKI */
 .btn {
   display: inline-block;
   text-decoration: none;
   padding: 15px 40px;
   text-transform: uppercase;
+  background-color: #1bba93;
+  color: #fff;
   letter-spacing: 1px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -151,20 +160,24 @@ body {
 
 
 /* DIV Z ZAWARTOŚCIĄ SEKCJI INTRO */
-.intro__flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 80px 0 30px;
-  align-content: center;
+
+.intro {
+    padding: 80px 0 30px;
 }
 
+.intro__image {
+    flex-basis: 35%;
+}
+
+
 /* ARTYKUŁ W SEKCJI INTRO */
-.intro__info {
+.intro__info  {
   margin-right: 85px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    flex-basis: 45%;
+}
+
+.intro__info.column {
+    justify-content: center;
 }
 
 
@@ -180,6 +193,7 @@ body {
   text-align: center;
   padding: 10px;
   line-height: 1.5em;
+  color: #535353;
 }
 
 
@@ -198,6 +212,7 @@ body {
   font-weight: 400;
   font-size: 60px;
   color: #1bba93;
+  flex-basis: 5%;
 }
 
 
@@ -304,10 +319,6 @@ body {
   border: 2px solid #d9d9d9;
   margin-top: 75px;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   height: 500px;
 }
 
@@ -446,8 +457,8 @@ body {
 
 /* SEKCJA KONTAKT */
 .contact {
-    width: 100%;
-    padding: 40px 0;
+  width: 100%;
+  padding: 40px 0;
 }
 
 .contact__title {
@@ -458,7 +469,7 @@ body {
 }
 
 .contact .row {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .contact__title::after {
@@ -472,52 +483,82 @@ body {
 
 .contact__form {
   flex-basis: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+}
+
+.contact__form.column {
+    align-items: stretch;
 }
 
 .contact__form input,
 .contact__form email {
-    font-size: 24px;
-    padding: 16px;
-    outline: 0;
-    border: 1px solid #1bba93;
-    color: #1bba93;
-    margin-bottom: 25px;
-    
+  font-size: 24px;
+  padding: 16px;
+  outline: 0;
+  border: 1px solid #1bba93;
+  color: #1bba93;
+  margin-bottom: 25px;
+
 }
 
 .contact__form textarea {
-    font-size: 24px;
-    padding: 16px;
-    outline: 0;
-    border: 1px solid #1bba93;
-    color: #1bba93;
-    height: 192px;
-    resize: none;
-}
- 
-::placeholder {
-    color: #d6d6d6;     
+  font-size: 24px;
+  padding: 16px;
+  outline: 0;
+  border: 1px solid #1bba93;
+  color: #1bba93;
+  height: 192px;
+  resize: none;
 }
 
-.contact__chair {
+::placeholder {
+  color: #d6d6d6;
+  font-family: 'Raleway', Arial, Tahoma, sans-serif;
+}
+
+.contact__send {
   flex-basis: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 
 .checkbox {
-    height: 48px;
-    width: 48px;
-    margin: 20px 16px 20px 0;
-    justify-content: space-between;
-
+  height: 48px;
+  width: 48px;
 }
 
 .checkbox__row {
-    display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.contact__agreement {
+  flex-basis: 80%;
+  line-height: 24px;
+  font-size: 16px;
+  color: #adadad;
+}
+
+.contact__cta {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+
+
+/* STOPKA STRONY */
+.page-footer {
+    padding: 40px 0;
+}
+
+.page-footer .row {
+    align-items: center;
+}
+
+.footer__text {
+    flex-basis: 65%;
 }
