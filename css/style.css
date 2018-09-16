@@ -1,19 +1,18 @@
 /* RESET CSS */
-
-/* GENERAL RULES */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
+/* CZCIONKA DLA WSZYSTKICH ELEMENTÓW NA STRONIE */
 body {
   font-family: 'Raleway', Arial, Tahoma, sans-serif;
 }
 
 
 /* KLASY POMOCNICZE */
-/* KONTENER 1060px SZEROKOŚCI */
+/* KONTENER MAX-W 1060px SZEROKOŚCI */
 .container {
   max-width: 1060px;
   width: 100%;
@@ -29,6 +28,7 @@ body {
   text-transform: uppercase;
 }
 
+/* FLEXBOX */
 .row {
   display: flex;
   justify-content: space-between;
@@ -41,7 +41,8 @@ body {
   justify-content: space-between;
 }
 
-/* PRZYCISKI */
+
+/* OGÓLNE STYLE DLA PRZYCISKÓW */
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -63,10 +64,8 @@ body {
   width: 100%;
 }
 
-/* GŁÓWNA NAWIGACJA */
+/* NAWIGACJA */
 .main-nav {
-  display: flex;
-  justify-content: space-between;
   padding: 15px 0;
 }
 
@@ -82,7 +81,7 @@ body {
 
 /* GŁÓWNE MENU */
 .main-nav__list {
-  display: flex;
+  list-style-type: none;
 }
 
 /* ELEMENTY GŁÓWNEGO MENU */
@@ -90,7 +89,6 @@ body {
   margin-left: 50px;
   position: relative;
   font-size: 15px;
-  list-style-type: none;
 }
 
 .main-nav__item:hover .about-dropdown {
@@ -110,13 +108,9 @@ body {
   color: white;
 }
 
-
 .main-nav__link:hover {
   color: #1bba93;
 }
-
-
-
 
 /* O FIRMIE - MENU DROPDOWN */
 .about-dropdown {
@@ -124,7 +118,7 @@ body {
   list-style-type: none;
   background: #000;
   position: absolute;
-  top: 42px;
+  top: 45px;
   right: -30px;
 }
 
@@ -156,30 +150,21 @@ body {
 .intro {
   width: 100%;
   background: linear-gradient(to bottom, #fafafa, #cecdd2);
-}
-
-
-/* DIV Z ZAWARTOŚCIĄ SEKCJI INTRO */
-
-.intro {
-    padding: 80px 0 30px;
+  padding: 80px 0 30px;
 }
 
 .intro__image {
-    flex-basis: 35%;
+  flex-basis: 35%;
 }
 
-
-/* ARTYKUŁ W SEKCJI INTRO */
-.intro__info  {
+.intro__info {
   margin-right: 85px;
-    flex-basis: 45%;
+  flex-basis: 45%;
 }
 
 .intro__info.column {
-    justify-content: center;
+  justify-content: center;
 }
-
 
 .intro__title {
   font-size: 40px;
@@ -196,14 +181,12 @@ body {
   color: #535353;
 }
 
-
 .intro__cta {
   background-color: #1bba93;
   color: #fff;
   margin-top: 10px;
   font-size: 20px;
 }
-
 
 /* KONTROLERY SLIDERA */
 .arrows {
@@ -215,13 +198,11 @@ body {
   flex-basis: 5%;
 }
 
-
 /* SEKCJA PORTFOLIO */
 .portfolio {
   width: 100%;
   padding: 40px 0;
 }
-
 
 .portfolio__card {
   flex-basis: 32%;
@@ -293,9 +274,6 @@ body {
   padding: 40px 0;
 }
 
-
-
-
 .pricing__title {
   font-weight: 700;
   font-size: 20px;
@@ -312,7 +290,6 @@ body {
   display: block;
 }
 
-
 .pricing__plan {
   flex-basis: 32%;
   background-color: #f9f9f9;
@@ -321,7 +298,6 @@ body {
   position: relative;
   height: 500px;
 }
-
 
 .pricing__plan::before {
   content: "";
@@ -340,7 +316,6 @@ body {
 }
 
 /* AKCJA PO NAJECHANIU KURSOREM NA KARTĘ Z OFERTĄ */
-
 .pricing__plan:hover {
   background-color: #1bba93;
   border: none;
@@ -386,7 +361,6 @@ body {
 
 
 /* STYLE DLA ZAWARTOŚCI BOXÓW Z OFERTĄ */
-
 .plan__name {
   color: #1bba93;
   padding-top: 40px;
@@ -454,7 +428,6 @@ body {
   margin-bottom: 20px;
 }
 
-
 /* SEKCJA KONTAKT */
 .contact {
   width: 100%;
@@ -486,7 +459,7 @@ body {
 }
 
 .contact__form.column {
-    align-items: stretch;
+  align-items: stretch;
 }
 
 .contact__form input,
@@ -519,10 +492,20 @@ body {
   flex-basis: 30%;
 }
 
-
-.checkbox {
+.contact__checkbox {
+  -webkit-appearance: none;
+  outline: none;
   height: 48px;
   width: 48px;
+  background: #fff;
+  border: 1px solid #1bba93;
+}
+
+.contact__checkbox:checked {
+  background: url(../images/form_ok.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .checkbox__row {
@@ -549,16 +532,23 @@ body {
   font-weight: 700;
 }
 
-
 /* STOPKA STRONY */
 .page-footer {
-    padding: 40px 0;
+  padding: 40px 0;
 }
 
 .page-footer .row {
-    align-items: center;
+  align-items: center;
 }
 
 .footer__text {
-    flex-basis: 65%;
+  flex-basis: 60%;
+  color: #b9b9b9;
+}
+
+.footer__logo {
+  text-decoration: none;
+  color: #9b9b9b;
+  font-weight: 700;
+  text-transform: uppercase;
 }

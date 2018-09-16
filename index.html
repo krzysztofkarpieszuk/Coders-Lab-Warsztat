@@ -14,12 +14,12 @@
     <!-- Nagłówek -->
     <header class="page-header">
         <!-- główna nawigacja  -->
-        <nav class="main-nav container">
+        <nav class="main-nav container row">
             <!-- Logo -->
             <a href="#" class="nav__logo">Sit <span class="cyan--text">on</span> chair</a>
 
             <!-- Główne menu -->
-            <ul class="main-nav__list">
+            <ul class="main-nav__list row">
                 <!-- Elementy głównego menu -->
                 <li class="main-nav__item">
                     <a href="" class="main-nav__link">O firmie</a>
@@ -51,18 +51,20 @@
 
     <!-- Sekcja Intro ze Sliderem -->
     <section class="intro">
-
         <div class="row container">
+            <!-- Kontroler slidera -- previous -->
             <button class="arrows arrow--prev">&lt;</button>
+            <!-- Zdjęcie -->
             <img src="images/black_chair.png" alt="Black Chair" class="intro__image">
 
+            <!-- Tytuł, tekst i przycisk Intro -->
             <article class="intro__info column">
-
                 <h1 class="intro__title">Sit <span class="text--cyan">on</span> our <span class="text--cyan">chair</span></h1>
                 <p class="intro__para">
                     Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna.
                 </p>
 
+                <!-- Kontroler slidera -- next -->
                 <a href="#" class="btn intro__cta">Zobacz więcej</a>
             </article>
             <button class="arrows arrow--next">&gt;</button>
@@ -73,14 +75,17 @@
     <section class="portfolio">
         <div class="container row">
 
+            <!-- Karta portofolio -->
             <div class="portfolio__card portfolio__image portfolio__image--first">
                 <h3 class="portfolio__title">Chair <span class="text--uppercase">Clair</span></h3>
             </div>
 
+            <!-- Karta portfolio -->
             <div class="portfolio__card portfolio__image portfolio__image--second">
                 <h3 class="portfolio__title">Chair <span class="text--uppercase">Margarita</span> </h3>
             </div>
 
+            <!-- Karta portfolio -->
             <div class="portfolio__card portfolio__card--third">
                 <h3 class="portfolio__title">Finds all inputs</h3>
                 <p class="portfolio__para">
@@ -96,6 +101,8 @@
         <div class="container">
             <h3 class="pricing__title">Cennik</h3>
             <div class="row">
+
+                <!-- Karta z ofertą -->
                 <div class="pricing__plan column">
                     <h2 class="plan__name">Basic Plan</h2>
                     <div class="plan__circle">
@@ -109,7 +116,7 @@
                     <a href="#" class="btn plan__cta">Dołącz</a>
                 </div>
 
-
+                <!-- Karta z ofertą -->
                 <div class="pricing__plan column">
                     <h2 class="plan__name">Standard Plan</h2>
                     <div class="plan__circle">
@@ -124,7 +131,7 @@
                     <a href="#" class="btn plan__cta">Dołącz</a>
                 </div>
 
-
+                <!-- Karta z ofertą -->
                 <div class="pricing__plan column">
                     <h2 class="plan__name">Advance Plan</h2>
                     <div class="plan__circle">
@@ -145,20 +152,22 @@
 
     <!-- Sekcja Kontakt z formularzem -->
     <section class="contact">
-
         <div class="container">
             <h3 class="contact__title">Kontakt</h3>
             <div class="row">
+
+                <!-- Kolumna z Inputami -->
                 <div class="contact__form column">
                     <input type="text" id="firstName" name="firstName" placeholder="Imię">
                     <input type="email" name="email" id="email" placeholder="E-mail">
                     <textarea name="message" id="message" placeholder="Wiadomość"></textarea>
                 </div>
 
+                <!-- Kolumna z przyciskiem i checkboxem -->
                 <div class="contact__send column">
                     <img src="images/red_chair.png" alt="Czerwone Krzesło">
                     <form action="#" class="checkbox__row">
-                        <input type="checkbox" name="agree" class="checkbox">
+                        <input type="checkbox" name="agree" class="contact__checkbox">
                         <p class="contact__agreement">Zgadzam się na przetwarzanie danych osobowych</p>
                     </form>
                     <a href="" class="btn contact__cta">Wyślij</a>
@@ -167,9 +176,12 @@
         </div>
     </section>
 
+    <!-- Stopka strony -->
     <footer class="page-footer">
         <div class="container row">
-            <p class="footer__text">Copyright 2018 | All Rights Reserved - Sit on chair </p>
+            <p class="footer__text">Copyright 2018 | All Rights Reserved - Sit On chair </p>
+
+            <!-- Linki do serwisów społecznościowych -->
             <div class="social__icons row">
                 <a href="#" class="social__link">
                     <img src="images/flickr.png" alt="Flickr" class="social__image">
@@ -184,6 +196,8 @@
                     <img src="images/twitter.png" alt="twitter" class="social__image">
                 </a>
             </div>
+
+            <!-- Logo w stopce -->
             <a href="#" class="footer__logo">Sit on Chair</a>
         </div>
     </footer>
