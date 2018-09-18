@@ -52,10 +52,6 @@ body {
   color: #fff;
   letter-spacing: 1px;
   border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
 }
 
 /* NAGŁÓWEK */
@@ -65,9 +61,7 @@ body {
 }
 
 /* NAWIGACJA */
-.main-nav {
-  padding: 15px 0;
-}
+
 
 /* LOGO */
 .nav__logo {
@@ -77,6 +71,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.1em;
   font-size: 15px;
+  padding: 15px 0;
 }
 
 /* GŁÓWNE MENU */
@@ -101,6 +96,8 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.1em;
+  padding: 15px 0;
+  display: inline-block;
 }
 
 .main-nav__link:link {
@@ -118,7 +115,7 @@ body {
   list-style-type: none;
   background: #000;
   position: absolute;
-  top: 45px;
+  top: 60px;
   right: -30px;
 }
 
@@ -196,6 +193,13 @@ body {
   font-size: 60px;
   color: #1bba93;
   flex-basis: 5%;
+  outline: none;
+  transition: 0.5s;
+}
+
+.arrows:focus {
+  color: #0aaa84;
+  transform: scale(0.9);
 }
 
 /* SEKCJA PORTFOLIO */
@@ -292,11 +296,13 @@ body {
 
 .pricing__plan {
   flex-basis: 32%;
+  transition:0.5s;
   background-color: #f9f9f9;
   border: 2px solid #d9d9d9;
   margin-top: 75px;
   position: relative;
   height: 500px;
+  transition: 0.5s;
 }
 
 .pricing__plan::before {
@@ -306,10 +312,6 @@ body {
   border: 2px solid #d4d4d4;
   background-image: radial-gradient(#c2c2c2 35%, #fff 35%);
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   position: absolute;
   top: -25px;
   left: calc(50% - 25px);
@@ -321,17 +323,13 @@ body {
   border: none;
 }
 
-.pricing__plan:hover.pricing__plan::before {
+.pricing__plan:hover::before {
   content: "";
   height: 50px;
   width: 50px;
   border: none;
   background-image: radial-gradient(#fff 35%, #1bba93 35%);
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   position: absolute;
   top: -25px;
   left: calc(50% - 25px);
@@ -378,10 +376,6 @@ body {
   background-color: #fff;
   border: 1px solid #e8e8e8;
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
 }
 
 .circle__cost {
