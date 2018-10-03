@@ -86,9 +86,9 @@ body {
   font-size: 15px;
 }
 
-.main-nav__item:hover .about-dropdown {
+/* .main-nav__item:hover .about-dropdown {
   display: block;
-}
+} */
 
 .main-nav__link {
   text-decoration: none;
@@ -143,53 +143,66 @@ body {
 }
 
 
-
-
 /* SEKCJA INTRO */
 .intro-section {
   width: 100%;
   background: linear-gradient(to bottom, #fafafa, #cecdd2);
-  padding: 80px 0 30px;
 }
 
 .intro {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 500px;
 }
 
-.controls {
-  border: none;
-  cursor: pointer;
-  font-size: 70px;
-  outline: none;
-  color: #1bba93;
-  background: transparent;
-}
+.intro__slides {
+  position: relative;
+  height: 100%;
+  width: 100%;
 
-.control--next {
-  order: 1;
-}
-
-.intro__image {
-  flex-basis: 35%;
 }
 
 .intro__slide {
-  display: none;
+  position: absolute;
+  top: 0;
+  right: -9999px;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  display: flex;
+  transition: 1s ease-in-out;
 }
 
 .intro__slide--active {
+  opacity: 1;
+  left: 0;
+  z-index: 1;
+}
+
+.intro__slide-img {
+  height: 100%;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.intro__slide-img img {
+  max-width: 90%;
+  width: 100%;
 }
 
 .intro__slide-cnt {
-  margin-right: 85px;
+  height: 100%;
   flex-basis: 45%;
-}
-
-.intro__slide-cnt.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
+
 
 .intro__title {
   font-size: 40px;
@@ -213,20 +226,27 @@ body {
   font-size: 20px;
 }
 
-/* KONTROLERY SLIDERA */
-.arrows {
-  background: transparent;
-  border: none;
-  /* font-weight: 400; */
-  font-size: 70px;
-  color: #1bba93;
-  flex-basis: 5%;
-  outline: none;
-  transition: 0.5s;
-  cursor: pointer;
+
+.intro__slide--active {
+
 }
 
-.arrows:focus {
+/* KONTROLERY SLIDERA */
+.controls {
+  border: none;
+  cursor: pointer;
+  font-size: 70px;
+  outline: none;
+  color: #1bba93;
+  background: transparent;
+}
+
+.control--next {
+  order: 1;
+}
+
+.controls:hover,
+.controls:focus {
   color: #0aaa84;
   transform: scale(0.9);
 }
