@@ -86,9 +86,11 @@ body {
   font-size: 15px;
 }
 
-/* .main-nav__item:hover .about-dropdown {
+
+.main-nav__item:hover .about-dropdown {
   display: block;
-} */
+  z-index: 5;
+}
 
 .main-nav__link {
   text-decoration: none;
@@ -97,7 +99,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.1em;
   padding: 15px 0;
-  display: inline-block;
+  display: block;
 }
 
 .main-nav__link:link {
@@ -131,6 +133,8 @@ body {
 }
 
 
+
+
 /* O FIRMIE - ELEMENTY MENU DROPDOWN */
 .about-dropdown__item {
   margin: 10px 25px 10px 10px;
@@ -142,6 +146,9 @@ body {
   color: white;
 }
 
+.about-dropdown__link:hover {
+  color: #1bba93;
+}
 
 /* SEKCJA INTRO */
 .intro-section {
@@ -226,10 +233,6 @@ body {
   font-size: 20px;
 }
 
-
-.intro__slide--active {
-
-}
 
 /* KONTROLERY SLIDERA */
 .controls {
@@ -319,6 +322,15 @@ body {
   padding-bottom: 15px;
 }
 
+
+/* SCHOWANIE TEKSTU PO NAJECHANIU NA ZDJĘCIE */
+.portfolio__image h3 {
+  transition: 0.4s; 
+}
+
+.portfolio__image:hover h3 {
+  opacity: 0;
+}
 
 /* SEKCJA PRICING */
 .pricing {
