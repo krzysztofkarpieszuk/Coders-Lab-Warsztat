@@ -87,4 +87,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
     };
     var s1 = new Slider('#intro-slider', 5000);
+
+
+    // KALKULATOR
+
+    // var lists = document.querySelectorAll(".drop_down_list");
+
+    // var summary = document.querySelector(".summary_panel");
+    // var namePanel = summary.querySelector(".panel_left");
+    // var pricePanel = summary.querySelector(".panel_right");
+    // var namePanelSpans = namePanel.querySelectorAll("span");
+    // var pricePanelSpans = pricePanel.querySelectorAll("span");
+    // var transport = document.querySelector("#transport");
+
+    // function Order(selector) {
+    //     this.option = document.querySelector(selector);
+    //     this.
+    // }
+
+
+
+
+
+    // var selectType = document.querySelector(".list_arrow:first-child");
+    // var typeList = document.querySelector(".list_panel:first-of-type");
+    // var selectColor = document.querySelector(".list_arrow:nth-of-type(2)");
+    // var colorList = document.querySelector(".list_arrow:nth-of-type(2)");
+    // var selectTextile = document.querySelector(".list_arrow:nth-of-type(3)");
+    // var textileList = document.querySelector(".list_arrow:nth-of-type(3)");
+
+    // console.log(selectType);
+    // selectType.addEventListener('click', function(e) {
+
+    //     if (typeList.style.display == "none") {
+    //         typeList.style.display = "block";
+    //     } else if (typeList.style.display == "block") {
+    //         typeList.style.display = "none";
+    //     }
+    // });
+
 });
